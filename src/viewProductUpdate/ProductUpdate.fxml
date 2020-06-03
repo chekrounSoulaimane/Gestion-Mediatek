@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="464.0" prefWidth="369.0" style="-fx-background-color: #05071F;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewProductUpdate.ProductUpdateController">
+    <stylesheets>
+        <URL value="@productupdate.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="idTextField" editable="false" layoutX="70.0" layoutY="111.0" prefHeight="30.0" prefWidth="230.0" />
+      <TextField fx:id="designationTextField" layoutX="70.0" layoutY="191.0" prefHeight="30.0" prefWidth="230.0" />
+      <TextField fx:id="prixTextField" layoutX="70.0" layoutY="271.0" prefHeight="30.0" prefWidth="230.0" />
+      <Label layoutX="70.0" layoutY="83.0" prefHeight="17.0" prefWidth="120.0" text="id" textFill="WHITE">
+         <padding>
+            <Insets bottom="8.0" left="10.0" />
+         </padding>
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="163.0" prefHeight="17.0" prefWidth="120.0" text="Désignation" textFill="WHITE">
+         <padding>
+            <Insets bottom="8.0" left="10.0" />
+         </padding>
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="243.0" prefHeight="17.0" prefWidth="120.0" text="Prix" textFill="WHITE">
+         <padding>
+            <Insets bottom="8.0" left="10.0" />
+         </padding>
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="323.0" prefHeight="17.0" prefWidth="120.0" text="Quantité" textFill="WHITE">
+         <padding>
+            <Insets bottom="8.0" left="10.0" />
+         </padding>
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonModifier" layoutX="215.0" layoutY="411.0" mnemonicParsing="false" onAction="#updateProduct" prefHeight="25.0" prefWidth="120.0" text="Modifier">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="buttonAnnuler" layoutX="34.0" layoutY="411.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="120.0" text="Annuler">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label layoutX="100.0" layoutY="29.0" prefHeight="28.0" prefWidth="180.0" text="Modifier Produit" textAlignment="CENTER" textFill="#9b59b6" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font></Label>
+      <TextField fx:id="quantiteTextField" layoutX="70.0" layoutY="351.0" prefHeight="30.0" prefWidth="230.0" />
+      <Label fx:id="lblErrDesignation" layoutX="80.0" layoutY="222.0" text="Label" textFill="RED" visible="false" />
+      <Label fx:id="lblErrPrix" layoutX="80.0" layoutY="301.0" text="Label" textFill="RED" visible="false" />
+      <Label fx:id="lblErrQuantite" layoutX="80.0" layoutY="381.0" text="Label" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>
