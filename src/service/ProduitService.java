@@ -44,4 +44,8 @@ public class ProduitService {
     public long getNextId() throws Exception {
         return produitDao.findMaxId() + 1;
     }
+    
+    public String getDemande(long id) throws Exception {
+        return produitDao.getDemande(id);
+    }
 }

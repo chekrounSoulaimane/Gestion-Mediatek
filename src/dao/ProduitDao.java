@@ -33,4 +33,14 @@ public class ProduitDao extends AbstractDao<Produit>{
         }
         return id;
     }
+    
+    public String getDemande(long id) throws Exception {
+        String demande = new String();
+        String requette = "SELECT f_produit_demande(id) AS demande FROM produit WHERE id = " + id ;
+        ResultSet resultSet = ConnectDB.load(requette);
+        while(resultSet.next()) {
+            demande = resultSet.getString("demande");
+        }
+        return demande;
+    }
 }

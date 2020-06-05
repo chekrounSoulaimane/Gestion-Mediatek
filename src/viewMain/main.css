@@ -14,14 +14,12 @@
     -fx-border-color : #05071F;
 }
 
-.button:hover,
-.Product-Box-Button:hover
+.button:hover
 {
     -fx-background-color : #10165F;
 }
 
-.button:pressed,
-.Product-Box-Button:pressed
+.button:pressed
 {
     -fx-background-color : #1620A1;
 }
@@ -42,10 +40,21 @@
     -fx-arc-width: 15;
 }
 
-.Product-Box-Button {
-    -fx-background-radius: 15em; 
+.Product-Box-Button 
+{
+    -fx-background-color :  #02030A;
     -fx-border-width : 0;
-    -fx-effect: dropshadow( gaussian ,  #CCCCCC, 5,0,0,1 ); 
+    -fx-cursor: hand;
+}
+
+.Product-Box-Button:hover
+{
+    -fx-background-color : #02030A;
+}
+
+.Product-Box-Button:pressed
+{
+    -fx-background-color : #02030A;
 }
 
 .scroll-pane {

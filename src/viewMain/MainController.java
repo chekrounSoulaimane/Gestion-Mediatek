@@ -30,6 +30,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -79,38 +80,31 @@ public class MainController implements Initializable {
     private VBox productPageVBox;
     @FXML
     private TextField productPageSearchTextField;
+    
+    private final String productsImagesFolder = "file:///C:/Users/pc/Documents/NetBeansProjects/Gestion-Mediatek/src/images/products/";
 
     public void loadProductsPage(List<Produit> produits) throws IOException, Exception {
-        int numberOfProducts = produits.size();
-        int rows = numberOfProducts / 3 + 1;
-        int columns = 3;
-
-        for (int i = 0; i < rows; i++) {
-            HBox productPageHBox = new HBox();
-            productPageHBox.setSpacing(30);
-            productPageHBox.setMinHeight(215);
-            if (numberOfProducts - (i * 3) < 3) {
-                columns = numberOfProducts - (i * 3);
-            }
-            for (int j = 0; j < columns; j++) {
-                productPageHBox.getChildren().add(customizeProductBox(produits.get((i * 3) + j)));
-            }
-            productPageVBox.getChildren().add(productPageHBox);
+        for (int i = 0; i < produits.size(); i++) {
+            productPageVBox.getChildren().add(customizeProductBox(produits.get(i)));
         }
     }
 
-    public AnchorPane customizeProductBox(Produit produit) throws IOException {
+    public AnchorPane customizeProductBox(Produit produit) throws IOException, Exception {
         AnchorPane anchorPane = FxUtil.getAnchorPane("/viewMain/ProductBox.fxml");
         anchorPane.setId(String.valueOf(produit.getId()));
-        Rectangle rectangle = (Rectangle) anchorPane.getChildren().get(0);
-        Label prix = (Label) anchorPane.getChildren().get(1);
-        Label designation = (Label) anchorPane.getChildren().get(2);
-        Button deleteButton = (Button) anchorPane.getChildren().get(3);
-        Button updateButton = (Button) anchorPane.getChildren().get(4);
+        Circle circle = (Circle) anchorPane.getChildren().get(0);
+        Label designation = (Label) anchorPane.getChildren().get(1);
+        Button deleteButton = (Button) anchorPane.getChildren().get(2);
+        Label prix = (Label) anchorPane.getChildren().get(3);
+        Label quatite = (Label) anchorPane.getChildren().get(4);
+        Button updateButton = (Button) anchorPane.getChildren().get(5);
+        Label demande = (Label) anchorPane.getChildren().get(6);
+        
         //Image image = new Image("");
-        //rectangle.setFill(new ImagePattern(image));
-        prix.setText(produit.getPrix() + " DH");
+        //circle.setFill(new ImagePattern(image));
+        
         designation.setText(produit.getDesignation());
+        
         // boutton supprimer event handler
         EventHandler<ActionEvent> buttonHandler1 = (ActionEvent event) -> {
             try {
@@ -120,6 +114,11 @@ public class MainController implements Initializable {
             }
         };
         deleteButton.setOnAction(buttonHandler1);
+        
+        prix.setText(produit.getPrix() + " DH");
+        
+        quatite.setText(String.valueOf(produit.getQuantite_stock()));
+        
         // boutton modifier event handler
         EventHandler<ActionEvent> buttonHandler2 = (ActionEvent event) -> {
             try {
@@ -129,6 +128,19 @@ public class MainController implements Initializable {
             }
         };
         updateButton.setOnAction(buttonHandler2);
+        
+        String textFill = new String(); 
+        String produitDemande = produitService.getDemande(produit.getId()); 
+        if (produitDemande.equals("faible")) {
+            textFill = "red";
+        } else if (produitDemande.equals("moyenne")) {
+            textFill = "#10165F";
+        } else if (produitDemande.equals("fort")) {
+            textFill = "green";
+        }
+        demande.setText("Demande " + produitDemande);
+        demande.setStyle("-fx-text-fill: " + textFill + ";");
+        
         return anchorPane;
     }
 

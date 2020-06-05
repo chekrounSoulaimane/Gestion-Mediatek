@@ -6,42 +6,57 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="215.0" prefWidth="185.0" scaleShape="false" style="-fx-background-color: #02030A;" styleClass="Product-Box" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" minHeight="108.0" prefHeight="108.0" prefWidth="642.0" style="-fx-background-color: #02030A;" styleClass="Product-Box" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="131.0" layoutX="10.0" layoutY="14.0" stroke="#02030a" strokeLineCap="ROUND" strokeType="INSIDE" styleClass="Product-Box-Image" width="165.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
-      <Label layoutX="112.0" layoutY="11.0" prefHeight="23.0" prefWidth="62.0" style="-fx-background-color: #7176B9; -fx-background-radius: 8;" text="25,00 DH" textAlignment="CENTER" textFill="WHITE">
+      <Circle fill="DODGERBLUE" layoutX="62.0" layoutY="54.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="110.0" layoutY="13.0" text="designation" textFill="#cccccc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
          <padding>
-            <Insets left="8.0" />
+            <Insets left="20.0" />
          </padding>
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
       </Label>
-      <Label layoutX="14.0" layoutY="141.0" text="Label" textFill="#cccccc">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Label>
-      <Button layoutX="112.0" layoutY="170.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: #02030A;" styleClass="Product-Box-Button">
+      <Button layoutX="581.0" layoutY="35.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="33.0" styleClass="Product-Box-Button" stylesheets="@main.css">
          <graphic>
-            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="33.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/icons8-trash-24.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="36.0" layoutY="170.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: #02030A;" styleClass="Product-Box-Button">
-         <graphic>
-            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/icons8-refresh-16.png" />
-               </image>
-            </ImageView>
-         </graphic>
+      <Label layoutX="115.0" layoutY="51.0" text="prix" textFill="#cccccc">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </Label>
+      <Label layoutX="261.0" layoutY="52.0" text="quantite" textFill="#cccccc">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </Label>
+      <Button layoutX="462.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" styleClass="ButtonAddProduct" stylesheets="@main.css" text="Modifier">
+         <font>
+            <Font size="15.0" />
+         </font>
       </Button>
+      <Label layoutX="121.0" layoutY="77.0" text="Demande " textFill="#cccccc">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </Label>
    </children>
 </AnchorPane>
