@@ -5,6 +5,7 @@
  */
 package service;
 
+import bean.Client;
 import dao.ClientDao;
 
 /**
@@ -13,6 +14,17 @@ import dao.ClientDao;
  */
 public class ClientService {
     
-    private ClientDao clientDao = new ClientDao();
+    private final ClientDao clientDao = new ClientDao();
     
+    public Client findByCin(String cin) throws Exception {
+        return clientDao.findByCin(cin);
+    }
+    
+    public void save(Client client) throws Exception {
+        clientDao.save(client);
+    }
+    
+    public long nextId() throws Exception {
+        return clientDao.findMaxId() + 1;
+    }
 }

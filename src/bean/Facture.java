@@ -5,6 +5,8 @@
  */
 package bean;
 
+import java.sql.Date;
+
 /**
  *
  * @author Soulaimane
@@ -13,8 +15,9 @@ public class Facture {
     
     private long id;
     private String libelle;
-    private String date_etablissement;
+    private Date date_etablissement;
     private double total;
+    private double total_paye;
     private Client client;
     
     // Getters
@@ -27,7 +30,7 @@ public class Facture {
         return libelle;
     }
 
-    public String getDate_etablissement() {
+    public Date getDate_etablissement() {
         return date_etablissement;
     }
 
@@ -37,6 +40,10 @@ public class Facture {
 
     public Client getClient() {
         return client;
+    }
+    
+    public double getTotal_paye() {
+        return total_paye;
     }
     
     // Setters
@@ -49,7 +56,7 @@ public class Facture {
         this.libelle = libelle;
     }
 
-    public void setDate_etablissement(String date_etablissement) {
+    public void setDate_etablissement(Date date_etablissement) {
         this.date_etablissement = date_etablissement;
     }
 
@@ -60,13 +67,19 @@ public class Facture {
     public void setClient(Client client) {
         this.client = client;
     }
+
+    public void setTotal_paye(double total_paye) {
+        this.total_paye = total_paye;
+    }
+
     
+
     // Constructeur
 
     public Facture() {
     }
 
-    public Facture(long id, String libelle, String date_etablissement, double total, Client client) {
+    public Facture(long id, String libelle, Date date_etablissement, double total, Client client) {
         this.id = id;
         this.libelle = libelle;
         this.date_etablissement = date_etablissement;
@@ -78,8 +91,13 @@ public class Facture {
 
     @Override
     public String toString() {
-        return "Facture{" + "id=" + id + ", libelle=" + libelle + ", date_etablissement=" + date_etablissement + ", total=" + total + ", client=" + client + '}';
+        return String.valueOf(id);
     }
+
+    
+
+    
+
     
     
     

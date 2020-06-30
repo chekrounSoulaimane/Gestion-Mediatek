@@ -1,0 +1,348 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.button
+{
+    -fx-background-color : #05071F;
+    -fx-text-fill : #e7e5e5;
+    -fx-border-width : 0 0 0 5; 
+    -fx-border-color : #05071F;
+}
+
+.button:hover
+{
+    -fx-background-color : #10165F;
+}
+
+.button:pressed
+{
+    -fx-background-color : #1620A1;
+}
+
+.userButton
+{
+    -fx-background-color : #05071F;
+    -fx-text-fill : #e7e5e5;
+    -fx-border-width : 0 0 0 5; 
+    -fx-border-color : #05071F;
+}
+
+.userButton:hover
+{
+    -fx-background-color : #05071F;
+}
+
+.userButton:pressed
+{
+    -fx-background-color : #05071F;
+}
+
+.Product-Box 
+{
+    -fx-hgap: 5px;
+    -fx-padding: 0px;
+    -fx-margin: 10;
+
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow( gaussian , #9B59B6 , 7,0,0,1 ); 
+}
+
+.Product-Box-Image
+{
+    -fx-arc-height: 15;
+    -fx-arc-width: 15;
+}
+
+.Product-Box-Button 
+{
+    -fx-background-color :  #02030A;
+    -fx-border-width : 0;
+    -fx-cursor: hand;
+}
+
+.Product-Box-Button:hover
+{
+    -fx-background-color : #02030A;
+}
+
+.Product-Box-Button:pressed
+{
+    -fx-background-color : #02030A;
+}
+
+.scroll-pane {
+    -fx-background-color: #02030A;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #10165F;
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: black;
+}
+
+.textField {
+    -fx-text-fill: #CCCCCC;
+}
+
+.ButtonAddProduct {
+    -fx-background-color: #10165F;
+    -fx-background-radius: 2em; 
+    -fx-border-width : 0;
+}
+
+.table-view{
+    -fx-background-color: transparent;
+    -fx-width: 405.5;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+
+.table-view .column-header-background{
+    -fx-background-color:  transparent;
+    -fx-background-radius: 10 10 0 0; 
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-padding: 5 1 5 1;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-width : 0.5 0.25 0.5 0.5;
+    -fx-border-color: #ffffff;
+    -fx-border-radius: 10 10 0 0; 
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-padding: 5 1 5 1;
+    -fx-border-width : 0 0.5 0 0.5;
+    -fx-border-color: #ffffff;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #02030A;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-cell-size: 41px;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #02030A;
+    -fx-background-insets: 0, 0 0 1 0;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #005797;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background, 
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: #373B6F;
+    -fx-border-width : 0.25 0 0.25 0;
+    -fx-border-color: #ffffff;
+    -fx-background-radius: 2;
+    -fx-margin: 0;
+    -fx-font-size: 12px;
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-body-color: ladder(#444, yellow 100%, red 100%);
+}
+
+.spinner .increment-arrow-button:hover:pressed,
+.spinner .decrement-arrow-button:hover:pressed,
+.spinner .increment-arrow-button:pressed,
+.spinner .decrement-arrow-button:pressed {
+    -fx-body-color: ladder(#AAA, yellow 100%, red 100%);
+}
+
+.spinner .increment-arrow-button .increment-arrow,
+.spinner .decrement-arrow-button .decrement-arrow {
+    -fx-background-color: #ffffff;
+}
+
+/* gfgdsfsfds */
+
+.combo-box .list-cell 
+{
+    -fx-background: white;
+    -fx-background-color: #02030A;
+    -fx-text-fill: #CCCCCC;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 1.66667em; 
+    -fx-font-size: 14px;
+    -fx-background-radius: 2em;
+}
+
+.combo-box-popup .list-view 
+{
+    -fx-background-color: #02030A, #02030A;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , #10165F , 8, 0.0 , 0 , 0 );
+}    
+
+.combo-box-popup .list-view .list-cell 
+{
+    -fx-padding: 2 0 2 5;
+    -fx-background-color: #02030A;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover 
+{
+    -fx-background: -fx-accent;
+    -fx-background-color: #02030A;
+    -fx-text-fill: #10165F;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover 
+{
+    -fx-background-color: #02030A;
+    -fx-text-fill: #10165F;
+}
+
+.combo-box-base  
+{
+    -fx-background-color:  #02030A,  #02030A,  #02030A,  #02030A;
+    -fx-background-radius: 2em;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-padding: 0;
+    -fx-border-width: 1.2px;
+    -fx-border-radius:  2em 2em 2em 2em;
+    -fx-border-color:  #10165F;
+}
+
+.combo-box-base:hover
+{
+    -fx-color: -fx-hover-base;
+}
+
+.combo-box-base:showing 
+{
+    -fx-color: -fx-pressed-base;
+}
+
+.combo-box-base:focused {
+    -fx-background-color: #02030A, #02030A, #02030A, #02030A;
+    -fx-background-radius: 6.4, 4, 5, 3;
+    -fx-background-insets: -1.4, 0, 1, 2;
+}
+
+.combo-box-base:disabled 
+
+{
+    -fx-opacity: .4;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #10165F;
+}
+
+.tab
+{
+    -fx-pref-width: 250;
+    -fx-pref-height: 40;
+}
+
+.tab-header-background
+{
+    -fx-background-color:  #02030A;
+}
+
+.jfx-tab-pane .tab-selected-line
+{
+    -fx-border-color: #7176B9;
+}
+
+
+.chart-plot-background 
+{
+    -fx-background-color: #02030A;
+}
+
+.chart-title {
+    -fx-text-fill: #CCCCCC;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold; 
+}
+.axis {
+    -fx-font-size: 30px;    
+    -fx-font-weight: bold; 
+    -fx-tick-label-fill: #CCCCCC;
+    -fx-font-family: Tahoma;
+    -fx-tick-length: 20;
+    -fx-minor-tick-length: 10;
+}
+
+.axis-label {
+    -fx-text-fill: #10165F;
+}
+
+.chart-vertical-grid-lines 
+{
+    -fx-stroke: #02030A;
+}
+
+.chart-horizontal-grid-lines 
+{
+    -fx-stroke: #02030A;
+}
+
+.default-color0.chart-bar 
+{ 
+    -fx-bar-fill: #9B59B6; 
+}
+.default-color1.chart-bar 
+{ 
+    -fx-bar-fill: #9B59B6; 
+}

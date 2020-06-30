@@ -187,12 +187,11 @@ List<String> params = getParameterName(mothods);
 
     public static Object lunchGetter(Object objet, Method methodGetter) throws Exception {
         String type = methodGetter.getReturnType().getSimpleName();
-
-        if (isGenericType(type)) {
+        if (isGenericType(type) || type.equals("Client") || type.equals("Facture") || type.equals("Facture_ligne") || type.equals("Produit") || type.equals("Journal_advertissement")) {
             return methodGetter.invoke(objet, null);
         } else if (!type.equals("List") && !type.equals("ArrayList")) {
             Object resultatExec = methodGetter.invoke(objet, null);
-            return getId(resultatExec.getClass()).invoke(resultatExec, null);
+            return getId(resultatExec.getClass()).invoke(resultatExec, (Object) null);
         }
         return null;
     }
@@ -305,7 +304,6 @@ List<String> params = getParameterName(mothods);
                 } else if (object.getClass().getName().equals("java.lang.Double") || object.getClass().getName().equals("java.lang.Float")) {
                     res.add(object.toString().replace('.', ','));
                 } else {
-                    System.out.println("util.DaoEngigne.lunchGetters() " + object.getClass().getName());
                     res.add(object.toString());
                 }
             } else {

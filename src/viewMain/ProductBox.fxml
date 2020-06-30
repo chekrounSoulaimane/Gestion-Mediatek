@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="108.0" prefHeight="108.0" prefWidth="642.0" style="-fx-background-color: #02030A;" styleClass="Product-Box" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" minHeight="108.0" prefHeight="108.0" prefWidth="642.0" style="-fx-background-color: #02030A;" styleClass="Product-Box" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Circle fill="DODGERBLUE" layoutX="62.0" layoutY="54.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" />
       <Label layoutX="110.0" layoutY="13.0" text="designation" textFill="#cccccc">
@@ -20,7 +20,7 @@
             <Insets left="20.0" />
          </padding>
       </Label>
-      <Button layoutX="581.0" layoutY="35.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="33.0" styleClass="Product-Box-Button" stylesheets="@main.css">
+      <Button layoutX="581.0" layoutY="35.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="33.0" styleClass="Product-Box-Button" stylesheets="@style.css">
          <graphic>
             <ImageView fitHeight="33.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -45,7 +45,7 @@
             <Insets left="30.0" />
          </padding>
       </Label>
-      <Button layoutX="462.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" styleClass="ButtonAddProduct" stylesheets="@main.css" text="Modifier">
+      <Button layoutX="462.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" styleClass="ButtonAddProduct" stylesheets="@style.css" text="Modifier">
          <font>
             <Font size="15.0" />
          </font>

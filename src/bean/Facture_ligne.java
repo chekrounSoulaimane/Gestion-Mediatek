@@ -68,8 +68,10 @@ public class Facture_ligne {
 
     @Override
     public String toString() {
-        return "Facture_ligne{" + "id=" + id + ", quantite=" + quantite + ", produit=" + produit + ", facture=" + facture + '}';
+        return String.valueOf(id);
     }
+
+    
     
     
     

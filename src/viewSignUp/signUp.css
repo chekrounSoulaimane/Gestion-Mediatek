@@ -1,0 +1,105 @@
+.textField {
+    -fx-text-fill: #CCCCCC;
+}
+
+.combo-box .list-cell 
+{
+    -fx-background: white;
+    -fx-background-color: #02030A;
+    -fx-text-fill: #CCCCCC;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 1.66667em; 
+    -fx-font-size: 14px;
+    -fx-background-radius: 2em;
+}
+
+.combo-box-popup .list-view 
+{
+    -fx-background-color: #02030A, #02030A;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , #10165F , 8, 0.0 , 0 , 0 );
+}    
+
+.combo-box-popup .list-view .list-cell 
+{
+    -fx-padding: 2 0 2 5;
+    -fx-background-color: #02030A;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover 
+{
+    -fx-background: -fx-accent;
+    -fx-background-color: #02030A;
+    -fx-text-fill: #10165F;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover 
+{
+    -fx-background-color: #02030A;
+    -fx-text-fill: #10165F;
+}
+
+.combo-box-base  
+{
+    -fx-background-color:  #02030A,  #02030A,  #02030A,  #02030A;
+    -fx-background-radius: 2em;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-padding: 0;
+    -fx-border-width: 1.2px;
+    -fx-border-radius:  2em 2em 2em 2em;
+    -fx-border-color:  #10165F;
+}
+
+.combo-box-base:hover
+{
+    -fx-color: -fx-hover-base;
+}
+
+.combo-box-base:showing 
+{
+    -fx-color: -fx-pressed-base;
+}
+
+.combo-box-base:focused {
+    -fx-background-color: #02030A, #02030A, #02030A, #02030A;
+    -fx-background-radius: 6.4, 4, 5, 3;
+    -fx-background-insets: -1.4, 0, 1, 2;
+}
+
+.combo-box-base:disabled {
+    -fx-opacity: .4;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #10165F;
+}
+
+
+
+
+
+.date-picker > .text-field {
+    -fx-text-fill: #CCCCCC;
+    -fx-background-color:  #02030A;
+    -fx-background-radius : 2em; 
+}
+
+.date-picker:focused > .text-field,
+.date-picker > .text-field:focused {
+    -fx-background-color:  #02030A;
+    -fx-background-radius : 2em; 
+    
+}
+
+.date-picker:editable > .arrow-button > * {
+    -fx-opacity: 1;
+    -fx-background-color: #10165F;
+}
+
+.date-picker > .arrow-button {
+    -fx-background-color:  #02030A;
+    -fx-background-size: 60% 60%;
+    -fx-background-radius : 2em; 
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}

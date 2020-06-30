@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="412.0" prefWidth="688.0" style="-fx-background-color: #02030A;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewLogin.LoginController">
+   <children>
+      <AnchorPane prefHeight="412.0" prefWidth="314.0" style="-fx-background-color: #05071F;">
+         <children>
+            <ImageView fitHeight="54.0" fitWidth="57.0" layoutX="142.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-skyatlas-48.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="54.0" layoutY="209.0" text="MEDIA" textFill="#9b59b6">
+               <font>
+                  <Font name="Iskoola Pota Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="183.0" layoutY="207.0" text="Tech" textFill="#6770bf">
+               <font>
+                  <Font name="Iskoola Pota Bold" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="textFieldEmail" layoutX="362.0" layoutY="70.0" prefHeight="34.0" prefWidth="277.0" promptText="nom d'utilisateur ou email " style="-fx-background-color: #02030A; -fx-border-color: #10165F; -fx-border-radius: 2em; -fx-text-fill: #cccccc;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="signIn" layoutX="362.0" layoutY="191.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="78.0" style="-fx-background-color: #10165F;" text="Sign in" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Hyperlink layoutX="495.0" layoutY="192.0" onAction="#sendEmail" text="Mot de passe oublier ?" textFill="#9b59b6">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <Separator layoutX="359.0" layoutY="269.0" prefHeight="7.0" prefWidth="275.0" />
+      <Label alignment="CENTER" layoutX="477.0" layoutY="260.0" prefHeight="23.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="ou" textFill="#5b5a5a">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="357.0" layoutY="302.0" mnemonicParsing="false" onAction="#signUp" prefHeight="34.0" prefWidth="275.0" style="-fx-background-color: #10165F;" text="Sign up" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelEmailErr" layoutX="373.0" layoutY="104.0" text="Label" textFill="RED" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelConnectionErr" layoutX="363.0" layoutY="223.0" text="Label" textFill="RED" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPasswordErr" layoutX="373.0" layoutY="169.0" text="Label" textFill="RED" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="textFieldPassword" layoutX="362.0" layoutY="137.0" prefHeight="32.0" prefWidth="277.0" promptText="mot de passe" style="-fx-background-color: #02030A; -fx-border-color: #10165F; -fx-border-radius: 2em; -fx-text-fill: #cccccc;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+   </children>
+</AnchorPane>

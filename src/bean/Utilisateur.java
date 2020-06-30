@@ -11,22 +11,20 @@ import java.sql.Date;
  *
  * @author Soulaimane
  */
-public class Client {
+public class Utilisateur {
     
     private long id;
-    private String cin;
     private String nom;
     private String prenom;
+    private String email;
+    private String password;
+    private String genre;
     private Date date_naissance;
     
-    // Getters 
+    // getters
 
     public long getId() {
         return id;
-    }
-
-    public String getCin() {
-        return cin;
     }
 
     public String getNom() {
@@ -37,18 +35,26 @@ public class Client {
         return prenom;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
     public Date getDate_naissance() {
         return date_naissance;
     }
     
-    // Setters
+    // setters
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public void setCin(String cin) {
-        this.cin = cin;
     }
 
     public void setNom(String nom) {
@@ -59,20 +65,34 @@ public class Client {
         this.prenom = prenom;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
     public void setDate_naissance(Date date_naissance) {
         this.date_naissance = date_naissance;
     }
     
-    // Constructeur
+    // constructeur
 
-    public Client() {
+    public Utilisateur() {
     }
 
-    public Client(long id, String cin, String nom, String prenom, Date date_naissance) {
+    public Utilisateur(long id, String nom, String prenom, String email, String password, String genre, Date date_naissance) {
         this.id = id;
-        this.cin = cin;
         this.nom = nom;
         this.prenom = prenom;
+        this.email = email;
+        this.password = password;
+        this.genre = genre;
         this.date_naissance = date_naissance;
     }
     
@@ -82,6 +102,7 @@ public class Client {
     public String toString() {
         return String.valueOf(id);
     }
+
     
     
     
